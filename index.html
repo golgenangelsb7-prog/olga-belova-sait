@@ -318,7 +318,7 @@
   .certs { margin-top: var(--v-9); }
   .certs h3 { font-size: var(--v-t-xl); line-height: 1.2; letter-spacing: -0.02em; }
   .v-page .certs > p { margin-top: var(--v-3); color: var(--v-ink-soft); max-width: 44ch; }
-  .certs__row { margin-top: var(--v-6); display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: var(--v-5); }
+  .certs__row { margin-top: var(--v-6); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: var(--v-5); max-width: 56rem; }
   .cert__frame { display: block; aspect-ratio: 1.414; border-radius: var(--v-radius); overflow: hidden; background: var(--v-surface);
     box-shadow: inset 0 0 0 1.5px var(--v-hair-strong); position: relative; }
   .cert__frame::before { content: "Сертификат"; position: absolute; inset: 0; display: grid; place-items: center; font-size: var(--v-t-sm); font-weight: 700; color: var(--v-ink-soft); }
@@ -579,23 +579,22 @@
         </div>
       </div>
 
-      <!-- Сертификаты: пустые рамки-места. Чтобы вставить, скажите Claude «поставь сертификаты из папки …»:
-           рамка станет ссылкой <a class="cert__frame" href="assets/certN.webp"> с картинкой внутри. -->
+      <!-- Сертификаты: рамка – ссылка на картинку целиком. Новый – ещё одна <figure class="cert"> с assets/certN.webp. -->
       <div class="v-wrap certs" data-v-in data-v-stagger="70">
         <h3>Обучение и сертификаты</h3>
-        <p>Курсы, которые я прошла по сайтам и рекламе.</p>
+        <p>Курсы по рекламе и нейросетям, которые я прошла.</p>
         <div class="certs__row">
           <figure class="cert">
-            <div class="cert__frame"></div>
-            <figcaption><b>{{курс-1}}</b>{{школа-1}}, {{год-1}}</figcaption>
+            <a class="cert__frame" href="assets/cert1.webp" target="_blank" rel="noopener">
+              <img src="assets/cert1.webp" width="600" height="424" loading="lazy" alt="Сертификат Ольги Беловой: курс «Применение нейросетей в контекстной рекламе Яндекс Директ»">
+            </a>
+            <figcaption><b>Применение нейросетей в контекстной рекламе Яндекс Директ</b>Академия интернет-маркетинга, 2026</figcaption>
           </figure>
           <figure class="cert">
-            <div class="cert__frame"></div>
-            <figcaption><b>{{курс-2}}</b>{{школа-2}}, {{год-2}}</figcaption>
-          </figure>
-          <figure class="cert">
-            <div class="cert__frame"></div>
-            <figcaption><b>{{курс-3}}</b>{{школа-3}}, {{год-3}}</figcaption>
+            <a class="cert__frame" href="assets/cert2.webp" target="_blank" rel="noopener">
+              <img src="assets/cert2.webp" width="600" height="424" loading="lazy" alt="Сертификат Ольги Беловой: марафон «GPT's агенты»">
+            </a>
+            <figcaption><b>Марафон «GPT's агенты» – ИИ-ассистенты</b>Академия маркетинга, 2026</figcaption>
           </figure>
         </div>
       </div>
