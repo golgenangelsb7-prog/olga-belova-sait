@@ -87,27 +87,35 @@
   .hero__copy .v-btn { margin-top: var(--v-6); }
   .hero__chips { display: flex; flex-wrap: wrap; gap: var(--v-2); margin-top: var(--v-5); font-size: var(--v-t-xs); font-weight: 700; }
   .hero__chips span { padding: .45em .95em; border-radius: 999px; box-shadow: inset 0 0 0 1.5px var(--v-hair-strong); }
+  .hero__artbox { position: absolute; inset: 0; pointer-events: none; }
+  /* Телефон: текст идёт обычным потоком снизу, картинка занимает всё, что осталось сверху,
+     и масштабируется от своей коробки (container query) – на низком экране ничего не наезжает. */
   @media (max-width: 860px) {
-    .hero [data-v-stage] { --h: min(44svh, 360px); }
-    .hero__art { right: 50%; transform: translateX(50%); bottom: auto; top: 4.6rem; }
-    .hero__ad { width: 12rem; right: 0; bottom: 6%; }
-    .hero__copy { top: auto; bottom: max(1.5rem, env(safe-area-inset-bottom)); transform: none; right: var(--v-gutter); width: auto; }
+    .hero [data-v-stage] { display: flex; flex-direction: column; padding-top: 4.4rem; }
+    .hero__artbox { position: relative; inset: auto; flex: 1 1 auto; min-height: 8rem; container-type: size; margin: var(--v-3) var(--v-gutter) 0; }
+    .hero__art { --h: min(100cqh, calc(100cqw / .98)); right: auto; left: 50%; bottom: 0; transform: translateX(-50%); }
+    .hero__ad { width: calc(var(--h) * .56); right: 0; bottom: 6%; font-size: clamp(.5rem, calc(var(--h) * .031), .9rem); }
+    .hero__copy { position: relative; flex: none; left: auto; top: auto; bottom: auto; transform: none; width: auto;
+      padding: var(--v-5) var(--v-gutter) max(1.5rem, env(safe-area-inset-bottom)); }
+    .hero__copy h1 { font-size: clamp(1.65rem, 1.1rem + 2.6vw, 2.3rem); }
     .hero__copy .v-label { margin-bottom: var(--v-3); }
+    .hero__copy .lbl-name { display: none; }
     .hero__copy p { margin-top: var(--v-3); font-size: var(--v-t-base); }
-    .hero__copy .v-btn { margin-top: var(--v-5); }
+    .hero__copy .v-btn { margin-top: var(--v-4); }
     .hero__chips { display: none; }
   }
-  @media (max-width: 860px) and (max-height: 700px) { .hero__copy p { display: none; } }
+  @media (max-width: 860px) and (max-height: 740px) { .hero__copy p { display: none; } }
 
   /* ---- карточка «Реклама» (из обложки бренда) ---------------------------------- */
-  .ad { background: var(--v-surface); border-radius: var(--v-radius); padding: 1rem 1.1rem .9rem; box-shadow: var(--v-e2); color: var(--v-ink); }
-  .ad__tag { display: inline-block; font-size: .75rem; font-weight: 700; color: var(--v-ink-soft); border: 1.5px solid var(--v-hair-strong); border-radius: 6px; padding: .05em .45em; }
-  .ad__ttl { font-weight: 700; font-size: 1rem; line-height: 1.25; margin: .5em 0 .15em; }
-  .ad__url { font-size: .8rem; font-weight: 600; color: var(--v-ink-soft); }
-  .ad__bars { display: flex; align-items: flex-end; gap: 6px; height: 2.6rem; margin-top: .7rem; }
+  /* размеры в em: карточку можно масштабировать одним font-size */
+  .ad { background: var(--v-surface); border-radius: var(--v-radius); padding: 1em 1.1em .9em; box-shadow: var(--v-e2); color: var(--v-ink); font-size: 1rem; line-height: 1.4; }
+  .ad__tag { display: inline-block; font-size: .75em; font-weight: 700; color: var(--v-ink-soft); border: 1.5px solid var(--v-hair-strong); border-radius: 6px; padding: .05em .45em; }
+  .ad__ttl { font-weight: 700; font-size: 1em; line-height: 1.25; margin: .5em 0 .15em; }
+  .ad__url { font-size: .8em; font-weight: 600; color: var(--v-ink-soft); }
+  .ad__bars { display: flex; align-items: flex-end; gap: .4em; height: 2.6em; margin-top: .7em; }
   .ad__bars i { flex: 1; border-radius: 4px 4px 0 0; background: var(--brand-sand); height: calc(var(--b) * 1%); }
   .ad__bars i:last-child { background: var(--v-accent); }
-  .ad__cap { display: flex; justify-content: space-between; font-size: .75rem; font-weight: 700; color: var(--v-ink-soft); margin-top: .35rem; }
+  .ad__cap { display: flex; justify-content: space-between; font-size: .75em; font-weight: 700; color: var(--v-ink-soft); margin-top: .45em; }
   .ad__cap b { color: var(--v-ink); }
 
   /* ---- 1 · цена бездействия: два столбца текста, без карточек ------------------ */
@@ -150,16 +158,19 @@
   @media (max-width: 860px) {
     .path__in { grid-template-columns: 1fr; gap: var(--v-4); align-content: center; padding-top: 4.6rem; padding-bottom: var(--v-4); }
     .path__in > div:first-child { order: 2; }
-    .scene { order: 1; justify-self: center; width: min(100%, 24rem); }
+    /* картинка ограничена и шириной, и высотой экрана: шаги всегда помещаются под ней */
+    .scene { order: 1; justify-self: center; width: min(100%, 24rem, calc(34svh * 1.12)); font-size: clamp(.7rem, 2svh, 1rem); }
+    .path__in h2 { font-size: clamp(1.5rem, 4.2svh, 2.2rem); }
     .steps { margin-top: var(--v-4); }
     .steps li { padding-block: var(--v-3); }
     .steps li::before { top: var(--v-3); }
     .steps li:not(.is-on) p { display: none; }
     .steps h3 { font-size: var(--v-t-base); }
-    .scene__q { font-size: var(--v-t-xs); }
-    .scene .ad { padding: .7rem .8rem .6rem; }
-    .scene .ad__ttl { font-size: .85rem; }
-    .scene__leads .ad__bars { height: 2.6rem; }
+    .scene__q { font-size: .8em; }
+    .scene .ad { font-size: .85em; padding: .7em .8em .6em; }
+    .scene__leads .ad__bars { height: 2.6em; }
+    .steps li { padding-block: clamp(.45rem, 1.4svh, .75rem); }
+    .steps li::before { top: clamp(.45rem, 1.4svh, .75rem); }
   }
 
   /* ---- 3 · работы: боковая лента -------------------------------------------- */
@@ -349,7 +360,7 @@
     <!-- 0 · ПЕРВЫЙ ЭКРАН: арка с фото на жёлтом круге, карточка «Реклама» -->
     <section class="hero" id="top" data-v-act="pin" data-v-span="2.2" data-v-drift="#f3ede2" aria-label="Ольга Белова, сайты и Яндекс Директ">
       <div data-v-stage>
-        <div class="hero__art" aria-hidden="true">
+        <div class="hero__artbox"><div class="hero__art" aria-hidden="true">
           <div class="hero__sun"></div>
           <div class="hero__arch"><img src="assets/olga-full.webp" alt="" width="900" height="1200" fetchpriority="high"></div>
           <div class="ad hero__ad">
@@ -359,10 +370,10 @@
             <div class="ad__bars"><i style="--b:28"></i><i style="--b:40"></i><i style="--b:36"></i><i style="--b:58"></i><i style="--b:72"></i><i style="--b:100"></i></div>
             <div class="ad__cap"><span>Заявки с рекламы</span><b>↑</b></div>
           </div>
-        </div>
+        </div></div>
         <div class="hero__copy">
           <div data-v-cue="0 0.8 0">
-            <span class="v-label"><i aria-hidden="true"></i>Ольга Белова · сайты и Яндекс Директ</span>
+            <span class="v-label"><i aria-hidden="true"></i><span class="lbl-name">Ольга Белова · </span>сайты и Яндекс Директ</span>
             <h1 class="v-display h-xl">Сайт и Яндекс Директ для мастеров – <em class="mark">в одних руках</em></h1>
             <p>Соберу одностраничный сайт и настрою рекламу, которая ведёт на него. Живая ссылка на сайт – через 3 дня.</p>
             <a class="v-btn" href="https://t.me/loyolya" target="_blank" rel="noopener" data-v-magnet="0.2" data-v-rise="0">Написать в Telegram</a>
