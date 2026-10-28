@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ольга Белова · сайты и Яндекс Директ</title>
+<meta name="description" content="Одностраничные сайты для мастеров и малого бизнеса и настройка рекламы в Яндекс Директе, которая ведёт на этот сайт.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ольга Белова · сайты и Яндекс Директ">
+<meta property="og:description" content="Сайт и реклама в Директе для мастеров и малого бизнеса – в одних руках.">
+<meta property="og:image" content="{{ссылка-сайта}}/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="{{ссылка-сайта}}">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2714%27 fill=%27%23ffcf3f%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%275%27 fill=%27%23f2542d%27/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="vibe.css">
+<style>
+  /* ---- шрифт: Manrope 400–700 (variable), свои файлы --------------------------- */
+  @font-face { font-family: "Manrope"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("assets/fonts/manrope-cyrillic-ext.woff2") format("woff2"); unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+  @font-face { font-family: "Manrope"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("assets/fonts/manrope-cyrillic.woff2") format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: "Manrope"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("assets/fonts/manrope-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "Manrope"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("assets/fonts/manrope-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+  html, body { margin: 0; background: #f3ede2; }
+
+  /* ---- тема: бренд-папка, вариант 3 «Средний (Директ мягкий)» ------------------- */
+  .v-page {
+    --v-canvas: #f3ede2; --v-surface: #fffdf8;
+    --v-ink: #23201c; --v-ink-soft: #6b6257;          /* 5,6:1 на сливочном */
+    --v-accent: #ffcf3f; --v-accent-ink: #23201c;     /* жёлтый держит кнопку, маркер, столбик */
+    --brand-dot: #f2542d;                             /* только точка в марке */
+    --brand-sand: #eadfcb;
+    --v-font-display: "Manrope", "Segoe UI", system-ui, sans-serif;
+    --v-font-text: "Manrope", "Segoe UI", system-ui, sans-serif;
+    --v-display-weight: 700;
+    --v-shadow-color: 70 54 30;
+    --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .08), 0 8px 22px rgb(var(--v-shadow-color) / .10);
+    --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .10), 0 24px 56px rgb(var(--v-shadow-color) / .20);
+    --v-radius: 18px;
+    --v-t-xs: clamp(0.8125rem, 0.79rem + 0.15vw, 0.85rem);
+    --v-t-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+  }
+  .v-page .v-btn { font-weight: 700; }
+  /* жёлтый маркер под ключевыми словами – фирменный знак бренда */
+  .mark { font-style: normal; background: linear-gradient(transparent 58%, var(--v-accent) 58%, var(--v-accent) 92%, transparent 92%); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .h-xl { font-size: clamp(2.3rem, 1.3rem + 2.7vw, 4rem); line-height: 1.04; }
+  .h-lg { font-size: clamp(1.9rem, 1.2rem + 2vw, 3.1rem); line-height: 1.08; }
+  .h-md { font-size: clamp(1.4rem, 1.1rem + .9vw, 1.9rem); line-height: 1.16; }
+  .v-label { font-weight: 700; }
+
+  /* ---- шапка ------------------------------------------------------------------ */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
+    padding: var(--v-3) var(--v-gutter);
+    background: rgb(243 237 226 / .88); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--v-hair); }
+  .bar__mark { font-weight: 700; font-size: var(--v-t-base); text-decoration: none; display: inline-flex; align-items: center; gap: .55em; white-space: nowrap; }
+  .bar__mark i { width: .5em; height: .5em; border-radius: 50%; background: var(--brand-dot); display: inline-block; flex: none; }
+  .index { display: flex; gap: var(--v-6); font-size: var(--v-t-sm); }
+  .index a { text-decoration: none; color: var(--v-ink-soft); padding-block: .3em; transition: color .16s var(--v-ease-out); }
+  @media (hover: hover) and (pointer: fine) { .index a:hover { color: var(--v-ink); } }
+  .bar .v-btn { padding: .75em 1.3em; }
+  .bar__btns { display: flex; gap: var(--v-2); align-items: center; }
+  .bar .v-btn--ghost { padding-inline: 1.05em; box-shadow: inset 0 0 0 1.5px var(--v-hair-strong); }
+  .t-short { display: none; }
+  @media (max-width: 520px) { .bar .t-long { display: none; } .bar .t-short { display: inline; } }
+  @media (max-width: 1180px) { .index { display: none; } }
+  @media (max-width: 420px) { .bar .v-btn { padding: .65em 1em; } }
+
+  /* ---- 0 · первый экран: текст слева, арка с фото на жёлтом круге справа ------ */
+  .hero [data-v-stage] { --h: min(82svh, 780px); }
+  .v-page ol { margin: 0; padding: 0; list-style: none; }
+  .hero__art { position: absolute; right: var(--v-gutter); bottom: 0; width: calc(var(--h) * .98); height: var(--h); pointer-events: none; }
+  .hero__sun { position: absolute; right: 0; top: 0; width: calc(var(--h) * .84); aspect-ratio: 1; border-radius: 50%; background: var(--v-accent); }
+  .hero__arch { position: absolute; left: calc(var(--h) * .14); bottom: 0; width: calc(var(--h) * .48); height: calc(var(--h) * .86);
+    border-radius: 999px 999px 0 0; overflow: hidden; box-shadow: var(--v-e2); background: var(--brand-sand); }
+  .hero__arch img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; }
+  .hero__ad { position: absolute; right: 0; bottom: calc(var(--h) * .17); width: clamp(15rem, calc(var(--h) * .44), 21rem); }
+  .hero__copy { position: absolute; z-index: 3; left: var(--v-gutter); top: 50%; transform: translateY(-44%); width: min(36rem, calc(100vw - var(--h) * .98 - 3 * var(--v-gutter))); }
+  .hero__copy h1 { font-size: clamp(2.1rem, 1.1rem + 2.4vw, 3.6rem); }
+  .hero__copy .v-label { display: inline-flex; align-items: center; gap: .6em; margin-bottom: var(--v-5); color: var(--v-ink-soft); }
+  .hero__copy .v-label i { width: .55em; height: .55em; border-radius: 50%; background: var(--brand-dot); }
+  .hero__copy p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 34ch; font-size: var(--v-t-lg); line-height: 1.45; text-wrap: pretty; }
+  .hero__copy .v-btn { margin-top: var(--v-6); }
+  .hero__chips { display: flex; flex-wrap: wrap; gap: var(--v-2); margin-top: var(--v-5); font-size: var(--v-t-xs); font-weight: 700; }
+  .hero__chips span { padding: .45em .95em; border-radius: 999px; box-shadow: inset 0 0 0 1.5px var(--v-hair-strong); }
+  @media (max-width: 860px) {
+    .hero [data-v-stage] { --h: min(44svh, 360px); }
+    .hero__art { right: 50%; transform: translateX(50%); bottom: auto; top: 4.6rem; }
+    .hero__ad { width: 12rem; right: 0; bottom: 6%; }
+    .hero__copy { top: auto; bottom: max(1.5rem, env(safe-area-inset-bottom)); transform: none; right: var(--v-gutter); width: auto; }
+    .hero__copy .v-label { margin-bottom: var(--v-3); }
+    .hero__copy p { margin-top: var(--v-3); font-size: var(--v-t-base); }
+    .hero__copy .v-btn { margin-top: var(--v-5); }
+    .hero__chips { display: none; }
+  }
+  @media (max-width: 860px) and (max-height: 700px) { .hero__copy p { display: none; } }
+
+  /* ---- карточка «Реклама» (из обложки бренда) ---------------------------------- */
+  .ad { background: var(--v-surface); border-radius: var(--v-radius); padding: 1rem 1.1rem .9rem; box-shadow: var(--v-e2); color: var(--v-ink); }
+  .ad__tag { display: inline-block; font-size: .75rem; font-weight: 700; color: var(--v-ink-soft); border: 1.5px solid var(--v-hair-strong); border-radius: 6px; padding: .05em .45em; }
+  .ad__ttl { font-weight: 700; font-size: 1rem; line-height: 1.25; margin: .5em 0 .15em; }
+  .ad__url { font-size: .8rem; font-weight: 600; color: var(--v-ink-soft); }
+  .ad__bars { display: flex; align-items: flex-end; gap: 6px; height: 2.6rem; margin-top: .7rem; }
+  .ad__bars i { flex: 1; border-radius: 4px 4px 0 0; background: var(--brand-sand); height: calc(var(--b) * 1%); }
+  .ad__bars i:last-child { background: var(--v-accent); }
+  .ad__cap { display: flex; justify-content: space-between; font-size: .75rem; font-weight: 700; color: var(--v-ink-soft); margin-top: .35rem; }
+  .ad__cap b { color: var(--v-ink); }
+
+  /* ---- 1 · цена бездействия: два столбца текста, без карточек ------------------ */
+  .gap__head { max-width: 46rem; }
+  .gap__cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--v-8); margin-top: var(--v-8); padding-top: var(--v-6); border-top: 1px solid var(--v-hair); }
+  .gap__cols h3 { font-size: var(--v-t-lg); line-height: 1.25; }
+  .gap__cols p { margin-top: var(--v-3); color: var(--v-ink-soft); max-width: 40ch; text-wrap: pretty; }
+  .v-page p.gap__fix { margin-top: var(--v-8); font-size: var(--v-t-xl); font-weight: 700; line-height: 1.25; max-width: 30ch; letter-spacing: -0.02em; text-wrap: balance; }
+  @media (max-width: 760px) { .gap__cols { grid-template-columns: 1fr; gap: var(--v-6); margin-top: var(--v-6); } .gap__fix { margin-top: var(--v-7); } }
+
+  /* ---- 2 · путь заявки: фирменный ход. Шаг – от --v-p (свой JS), столбики – CSS --- */
+  .path { --g: clamp(0, calc((var(--v-p, 0) - .52) * 2.6), 1); }
+  .path__in { height: 100%; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--v-8); align-items: center; padding: 5rem var(--v-gutter) var(--v-6); max-width: 82rem; margin-inline: auto; }
+  .steps { margin-top: var(--v-6); counter-reset: s; }
+  .steps li { position: relative; padding: var(--v-4) 0 var(--v-4) 2.6rem; border-top: 1px solid var(--v-hair); opacity: .42; transition: opacity .3s var(--v-ease-out); }
+  .steps li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .steps li::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: var(--v-4); width: 1.7rem; height: 1.7rem; border-radius: 50%; display: grid; place-items: center;
+    font-size: var(--v-t-xs); font-weight: 700; box-shadow: inset 0 0 0 1.5px var(--v-hair-strong); transition: background-color .3s var(--v-ease-out); }
+  .steps h3 { font-size: var(--v-t-lg); line-height: 1.3; }
+  .steps p { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 42ch; margin-top: .35em; }
+  .steps li.is-on { opacity: 1; }
+  .steps li.is-on::before { background: var(--v-accent); box-shadow: none; }
+
+  .scene { position: relative; aspect-ratio: 1.12; width: 100%; max-width: 40rem; justify-self: end; }
+  .scene > * { position: absolute; transition: transform .4s var(--v-ease-out), opacity .4s var(--v-ease-out); }
+  .scene__sun { inset: 6% 4% 6% 14%; border-radius: 50%; background: var(--v-accent); opacity: .55; }
+  .scene__q { left: 0; top: 4%; display: flex; align-items: center; gap: .6em; background: var(--v-surface); border-radius: 999px; padding: .7em 1.2em; box-shadow: var(--v-e1); font-weight: 600; }
+  .scene__q svg { width: 1.1em; height: 1.1em; flex: none; }
+  .scene__ad { left: 4%; top: 20%; width: 56%; }
+  .scene__site { right: 0; top: 14%; width: 66%; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); background: var(--v-surface); }
+  .scene__site img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  .scene__leads { right: 6%; bottom: 2%; width: 50%; }
+  .scene__leads .ad__bars { height: 4.2rem; }
+  .scene__leads .ad__bars i { height: calc((var(--b) * .3 + var(--b) * .7 * var(--g)) * 1%); }
+  .scene__ad, .scene__q, .scene__leads { z-index: 2; }
+  /* активный план поднимается, остальные отходят */
+  .scene > .is-dim { opacity: .82; transform: scale(.97); }
+  .scene > .scene__site.is-dim { opacity: .7; }
+  .scene > .is-up { opacity: 1; transform: translateY(-6px); }
+  @media (max-width: 860px) {
+    .path__in { grid-template-columns: 1fr; gap: var(--v-4); align-content: center; padding-top: 4.6rem; padding-bottom: var(--v-4); }
+    .path__in > div:first-child { order: 2; }
+    .scene { order: 1; justify-self: center; width: min(100%, 24rem); }
+    .steps { margin-top: var(--v-4); }
+    .steps li { padding-block: var(--v-3); }
+    .steps li::before { top: var(--v-3); }
+    .steps li:not(.is-on) p { display: none; }
+    .steps h3 { font-size: var(--v-t-base); }
+    .scene__q { font-size: var(--v-t-xs); }
+    .scene .ad { padding: .7rem .8rem .6rem; }
+    .scene .ad__ttl { font-size: .85rem; }
+    .scene__leads .ad__bars { height: 2.6rem; }
+  }
+
+  /* ---- 3 · работы: боковая лента -------------------------------------------- */
+  .gal { display: flex; flex-direction: column; justify-content: center; height: 100%; padding-top: 4.5rem; }
+  .gal__rail { padding-inline: var(--v-gutter); align-items: flex-start; gap: clamp(1.25rem, 2.5vw, 2.5rem); }
+  .gal__intro { flex: none; width: clamp(18rem, 26vw, 25rem); padding-top: var(--v-4); padding-right: var(--v-5); }
+  .gal__intro p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 30ch; text-wrap: pretty; }
+  .gal__intro .v-btn { margin-top: var(--v-6); }
+  .work { flex: none; width: min(clamp(280px, 38vw, 560px), calc((100svh - 16rem) * 1.5)); }
+  .work__img { display: block; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e1); background: var(--v-surface); }
+  .work__img img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  .work figcaption { padding-top: var(--v-4); display: grid; gap: .3em; }
+  .work h3 { font-size: var(--v-t-lg); line-height: 1.25; }
+  .work p { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 48ch; text-wrap: pretty; }
+  .work__link { justify-self: start; margin-top: .3em; font-size: var(--v-t-sm); font-weight: 700; padding-block: .3em; text-decoration-color: var(--v-accent); text-decoration-thickness: 3px; text-underline-offset: .3em; }
+  @media (max-width: 860px) {
+    .gal__intro { width: 70vw; padding-top: 0; }
+    .work { width: min(80vw, calc((100svh - 16rem) * 1.5)); }
+  }
+  @media (pointer: coarse) {
+    .gal--touch { padding-top: 5rem; padding-bottom: var(--v-2); }
+    .gal--touch .gal__intro { width: auto; max-width: 36rem; padding: 0 var(--v-gutter); margin-bottom: var(--v-5); }
+    .gal--touch .gal__intro .v-btn { display: none; }
+    .gal--touch .gal { height: auto; padding-top: 0; display: block; }
+    .gal--touch [data-v-stage] { scroll-padding-inline: var(--v-gutter); }
+    .gal--touch .work { width: min(82vw, 26rem); }
+  }
+
+  /* ---- 3б · квиз: 4 вопроса и бонус ------------------------------------------ */
+  .quiz__head { max-width: 48rem; }
+  .quiz__box { margin-top: var(--v-7); display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: var(--v-6); align-items: stretch; }
+  .quiz__card { background: var(--brand-sand); border-radius: var(--v-radius); padding: clamp(1.25rem, 3vw, 2.5rem); display: flex; flex-direction: column; min-height: 25rem; }
+  .quiz__prog { display: flex; align-items: center; gap: var(--v-4); font-size: var(--v-t-xs); font-weight: 700; color: var(--v-ink-soft); }
+  .quiz__prog span { display: flex; gap: 6px; flex: 1; max-width: 12rem; }
+  .quiz__prog i { flex: 1; height: 5px; border-radius: 3px; background: rgb(35 32 28 / .14); transition: background-color .3s var(--v-ease-out); }
+  .quiz__prog i.is-done { background: var(--v-accent); }
+  .q { border: 0; margin: var(--v-5) 0 0; padding: 0; min-width: 0; }
+  .js-quiz .q:not(.is-on) { display: none; }
+  .q legend { padding: 0; font-weight: 700; font-size: var(--v-t-lg); line-height: 1.3; margin-bottom: var(--v-4); }
+  .q__opts { display: grid; gap: var(--v-2); max-width: 32rem; }
+  .q__opt { position: relative; display: flex; align-items: center; gap: .8em; padding: .85em 1.1em; border-radius: 12px; background: rgb(255 253 248 / .55);
+    box-shadow: inset 0 0 0 1.5px rgb(35 32 28 / .22); cursor: pointer; transition: background-color .16s var(--v-ease-out), box-shadow .16s var(--v-ease-out); }
+  .q__opt input { position: absolute; opacity: 0; pointer-events: none; }
+  .q__opt::before { content: ""; flex: none; width: 1.25rem; height: 1.25rem; border-radius: 50%; box-shadow: inset 0 0 0 2px var(--v-ink); background: transparent; transition: background-color .16s, box-shadow .16s; }
+  .q__opt:has(input:checked) { background: var(--v-surface); box-shadow: inset 0 0 0 2px var(--v-ink); }
+  .q__opt:has(input:checked)::before { background: var(--v-accent); box-shadow: inset 0 0 0 2px var(--v-ink), inset 0 0 0 5px var(--v-surface); }
+  .q__opt:has(input:focus-visible) { outline: 2px solid var(--v-ink); outline-offset: 2px; }
+  @media (hover: hover) and (pointer: fine) { .q__opt:hover { background: var(--v-surface); } }
+  .quiz__nav { margin-top: auto; padding-top: var(--v-6); display: flex; gap: var(--v-3); align-items: center; flex-wrap: wrap; }
+  .quiz__nav [hidden] { display: none; }
+  .v-page button.v-btn, .v-page .lead button.v-btn { background: var(--v-accent); color: var(--v-accent-ink); }
+  .quiz__nav .v-btn[disabled] { opacity: .45; pointer-events: none; box-shadow: none; }
+  .quiz__back { font-size: var(--v-t-sm); font-weight: 600; color: var(--v-ink-soft); padding: .6em .4em; }
+  .quiz__done { margin-top: var(--v-5); }
+  .js-quiz .quiz__done:not(.is-on) { display: none; }
+  .quiz__done h3 { font-size: var(--v-t-xl); line-height: 1.2; letter-spacing: -0.02em; }
+  .v-page .quiz__done p { margin-top: var(--v-3); color: var(--v-ink-soft); max-width: 44ch; }
+  .v-page .quiz__sum { margin-top: var(--v-4); display: grid; gap: .35em; font-size: var(--v-t-sm); }
+  .quiz__sum li { display: grid; grid-template-columns: auto 1fr; gap: .6em; }
+  .quiz__sum li::before { content: ""; width: .5rem; height: .5rem; margin-top: .55em; border-radius: 50%; background: var(--v-accent); box-shadow: 0 0 0 1.5px var(--v-ink); }
+  .quiz__note { font-size: var(--v-t-xs); color: var(--v-ink-soft); min-height: 1.4em; }
+  .bonus { position: relative; overflow: hidden; border-radius: var(--v-radius); background: var(--v-surface); box-shadow: var(--v-e1); padding: clamp(1.25rem, 3vw, 2.25rem); display: flex; flex-direction: column; }
+  .bonus::after { content: ""; position: absolute; width: 16rem; aspect-ratio: 1; border-radius: 50%; right: -5rem; bottom: -6rem; background: var(--v-accent); opacity: .9; }
+  .bonus > * { position: relative; z-index: 1; }
+  .bonus .ad__tag { align-self: flex-start; }
+  .bonus h3 { margin-top: var(--v-4); font-size: var(--v-t-xl); line-height: 1.15; letter-spacing: -0.02em; }
+  .v-page .bonus p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 30ch; }
+  .v-page .bonus small { margin-top: auto; padding-top: var(--v-6); font-size: var(--v-t-xs); color: var(--v-ink); max-width: 22ch; }
+  @media (max-width: 860px) {
+    .quiz__box { grid-template-columns: 1fr; margin-top: var(--v-6); }
+    .bonus { order: -1; }
+    .v-page .bonus small { padding-top: var(--v-4); }
+    .bonus::after { width: 8rem; right: -3rem; bottom: -3.5rem; }
+    .quiz__card { min-height: 0; }
+  }
+
+  /* ---- 4 · пакеты: строки с линиями ------------------------------------------ */
+  .packs { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--v-8) var(--v-9); align-items: start; }
+  .packs__head p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 34ch; }
+  .v-page .terms { margin-top: var(--v-6); display: grid; gap: var(--v-3); font-size: var(--v-t-sm); }
+  .terms li { display: grid; grid-template-columns: auto 1fr; gap: var(--v-3); align-items: baseline; }
+  .terms li::before { content: ""; width: 1.4rem; height: 3px; border-radius: 2px; background: var(--v-accent); align-self: center; }
+  .rows li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: var(--v-1) var(--v-6); align-items: baseline; padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); }
+  .rows li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .rows h3 { grid-row: 1; grid-column: 1; font-size: var(--v-t-lg); line-height: 1.25; }
+  .rows p { grid-row: 2; grid-column: 1; color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 46ch; }
+  .rows .time { grid-row: 1; grid-column: 2; color: var(--v-ink-soft); font-size: var(--v-t-sm); white-space: nowrap; }
+  .rows .price { grid-row: 1; grid-column: 3; font-weight: 700; white-space: nowrap; min-width: 6.5ch; text-align: right; }
+  .rows li.is-pair { background: linear-gradient(90deg, rgb(255 207 63 / .22), transparent 70%); border-radius: 0; padding-inline: var(--v-4); margin-inline: calc(-1 * var(--v-4)); }
+  .cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-5); margin-top: var(--v-7); }
+  .cta span { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 34ch; text-wrap: pretty; }
+  @media (max-width: 860px) {
+    .packs { grid-template-columns: 1fr; gap: var(--v-7); }
+    .rows li { grid-template-columns: minmax(0, 1fr) auto; }
+    .rows .time { grid-row: 2; grid-column: 1; }
+    .rows p { grid-row: 3; }
+    .rows .price { grid-column: 2; }
+  }
+
+  /* ---- 4б · без посредников: короткая заявка в Telegram ------------------------- */
+  .solo__head .v-display { max-width: 18ch; }
+  .v-page .solo__head p { margin-top: var(--v-4); font-size: var(--v-t-lg); color: var(--v-ink-soft); max-width: 46ch; }
+  .solo__head p b { color: var(--v-ink); font-weight: 700; }
+  .solo__box { margin-top: var(--v-7); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--v-6); align-items: center;
+    background: var(--brand-sand); border-radius: var(--v-radius); padding: clamp(1.25rem, 3vw, 2.5rem); }
+  .solo__ask { padding: var(--v-4) clamp(0rem, 3vw, 2.5rem); }
+  .solo__ask h3 { font-size: var(--v-t-xl); line-height: 1.2; letter-spacing: -0.02em; text-wrap: balance; }
+  .v-page .solo__ask p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 36ch; }
+  .lead { background: var(--v-surface); border-radius: var(--v-radius); padding: clamp(1.25rem, 2.5vw, 2rem); box-shadow: var(--v-e1); display: grid; gap: var(--v-3); }
+  .lead label { display: grid; gap: .35em; font-size: var(--v-t-xs); font-weight: 700; color: var(--v-ink-soft); }
+  .lead input { font: inherit; font-size: var(--v-t-base); font-weight: 500; color: var(--v-ink); background: var(--v-canvas); border: 0; border-radius: 12px; padding: .85em 1em;
+    box-shadow: inset 0 0 0 1.5px transparent; transition: box-shadow .16s var(--v-ease-out); width: 100%; }
+  .lead input::placeholder { color: #8f8578; }
+  .lead input:focus { outline: none; box-shadow: inset 0 0 0 2px var(--v-ink); }
+  .lead .v-btn { justify-self: start; margin-top: var(--v-2); }
+  .lead__note { font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  @media (max-width: 860px) { .solo__box { grid-template-columns: 1fr; margin-top: var(--v-6); } .solo__ask { padding: 0; } }
+
+  /* ---- 5 · обо мне и порядок работы ------------------------------------------ */
+  .me { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); gap: var(--v-8) var(--v-9); align-items: center; }
+  .me__fig { position: relative; border-radius: 999px 999px var(--v-radius) var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); aspect-ratio: 3 / 4; max-width: 28rem; width: 100%; background: var(--brand-sand); }
+  .me__fig img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  .me__copy > p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 44ch; text-wrap: pretty; }
+  .how { margin-top: var(--v-6); counter-reset: h; max-width: 46ch; }
+  .how li { position: relative; padding: var(--v-4) 0 var(--v-4) 2.4rem; border-top: 1px solid var(--v-hair); text-wrap: pretty; }
+  .how li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .how li::before { counter-increment: h; content: counter(h); position: absolute; left: 0; top: var(--v-4); font-weight: 700; color: var(--v-ink); width: 1.6rem; text-align: center;
+    background: linear-gradient(transparent 55%, var(--v-accent) 55%, var(--v-accent) 92%, transparent 92%); }
+  @media (max-width: 860px) { .me { grid-template-columns: 1fr; gap: var(--v-6); } .me__fig { max-width: 20rem; } }
+
+  /* сертификаты: файл assets/certN.webp есть – видна картинка, нет – светлая рамка-место */
+  .certs { margin-top: var(--v-9); }
+  .certs h3 { font-size: var(--v-t-xl); line-height: 1.2; letter-spacing: -0.02em; }
+  .v-page .certs > p { margin-top: var(--v-3); color: var(--v-ink-soft); max-width: 44ch; }
+  .certs__row { margin-top: var(--v-6); display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: var(--v-5); }
+  .cert__frame { display: block; aspect-ratio: 1.414; border-radius: var(--v-radius); overflow: hidden; background: var(--v-surface);
+    box-shadow: inset 0 0 0 1.5px var(--v-hair-strong); position: relative; }
+  .cert__frame::before { content: "Сертификат"; position: absolute; inset: 0; display: grid; place-items: center; font-size: var(--v-t-sm); font-weight: 700; color: var(--v-ink-soft); }
+  .cert__frame img { position: relative; width: 100%; height: 100%; object-fit: cover; }
+  .cert__frame:has(img) { box-shadow: var(--v-e1); }
+  .cert figcaption { margin-top: var(--v-3); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .cert figcaption b { display: block; color: var(--v-ink); font-weight: 700; }
+
+  /* ---- 7 · частые вопросы – последний блок, футер внутри него ------------------ */
+  #voprosy { padding-bottom: 0; }
+  .faq { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: var(--v-8) var(--v-9); align-items: start; }
+  .v-page .faq__head p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 30ch; }
+  .faq__head .v-btn { margin-top: var(--v-6); }
+  .faq__list details { border-top: 1px solid var(--v-hair); }
+  .faq__list details:last-child { border-bottom: 1px solid var(--v-hair); }
+  .faq__list summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: var(--v-4);
+    padding: var(--v-5) 0; font-weight: 700; font-size: var(--v-t-lg); line-height: 1.3; }
+  .faq__list summary::-webkit-details-marker { display: none; }
+  .faq__list summary::after { content: ""; flex: none; width: 2rem; height: 2rem; border-radius: 50%;
+    background: var(--v-surface) no-repeat center / 12px 12px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M6 1v10M1 6h10' stroke='%2323201c' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+    box-shadow: inset 0 0 0 1.5px var(--v-hair-strong); transition: transform .2s var(--v-ease-out), background-color .2s var(--v-ease-out); }
+  .faq__list details[open] summary::after { transform: rotate(45deg); background-color: var(--v-accent); box-shadow: none; }
+  .v-page .faq__list details p { padding: 0 3rem var(--v-5) 0; color: var(--v-ink-soft); max-width: 60ch; text-wrap: pretty; }
+  .foot--end { grid-column: 1 / -1; margin-top: var(--v-8); }
+  @media (max-width: 860px) { .faq { grid-template-columns: 1fr; gap: var(--v-6); } .faq__list summary { font-size: var(--v-t-base); } .v-page .faq__list details p { padding-right: 0; } }
+  .foot a { color: var(--v-ink); padding-block: .3em; display: inline-block; }
+  .foot { display: flex; justify-content: space-between; gap: var(--v-4); flex-wrap: wrap; padding: var(--v-6) 0; border-top: 1px solid var(--v-hair); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="bar__mark" href="#top"><i aria-hidden="true"></i><span>Ольга Белова</span></a>
+    <nav class="index" aria-label="Разделы">
+      <a href="#put">Как это работает</a>
+      <a href="#raboty">Работы</a>
+      <a href="#pakety">Пакеты</a>
+      <a href="#obo-mne">Обо мне</a>
+      <a href="#bonus">Бонус</a>
+      <a href="#voprosy">Вопросы</a>
+    </nav>
+    <div class="bar__btns">
+      <a class="v-btn v-btn--ghost" href="https://vk.ru/club237399090" target="_blank" rel="noopener" aria-label="Написать во ВКонтакте">ВК</a>
+      <a class="v-btn" href="https://t.me/loyolya" target="_blank" rel="noopener" aria-label="Написать в Telegram"><span class="t-long">Написать в Telegram</span><span class="t-short">Telegram</span></a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 0 · ПЕРВЫЙ ЭКРАН: арка с фото на жёлтом круге, карточка «Реклама» -->
+    <section class="hero" id="top" data-v-act="pin" data-v-span="2.2" data-v-drift="#f3ede2" aria-label="Ольга Белова, сайты и Яндекс Директ">
+      <div data-v-stage>
+        <div class="hero__art" aria-hidden="true">
+          <div class="hero__sun"></div>
+          <div class="hero__arch"><img src="assets/olga-full.webp" alt="" width="900" height="1200" fetchpriority="high"></div>
+          <div class="ad hero__ad">
+            <span class="ad__tag">Реклама</span>
+            <div class="ad__ttl">Маникюр у дома – запись онлайн</div>
+            <div class="ad__url">сайт-мастера.рф</div>
+            <div class="ad__bars"><i style="--b:28"></i><i style="--b:40"></i><i style="--b:36"></i><i style="--b:58"></i><i style="--b:72"></i><i style="--b:100"></i></div>
+            <div class="ad__cap"><span>Заявки с рекламы</span><b>↑</b></div>
+          </div>
+        </div>
+        <div class="hero__copy">
+          <div data-v-cue="0 0.8 0">
+            <span class="v-label"><i aria-hidden="true"></i>Ольга Белова · сайты и Яндекс Директ</span>
+            <h1 class="v-display h-xl">Сайт и Яндекс Директ для мастеров – <em class="mark">в одних руках</em></h1>
+            <p>Соберу одностраничный сайт и настрою рекламу, которая ведёт на него. Живая ссылка на сайт – через 3 дня.</p>
+            <a class="v-btn" href="https://t.me/loyolya" target="_blank" rel="noopener" data-v-magnet="0.2" data-v-rise="0">Написать в Telegram</a>
+            <div class="hero__chips"><span>Сайты для малого бизнеса</span><span>Яндекс Директ</span><span>Перенос в Тильду</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1 · ЦЕНА БЕЗДЕЙСТВИЯ: два способа потерять клиента -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f6f1e8" aria-label="Почему нужно и то и другое">
+      <div class="v-wrap">
+        <div class="gap__head" data-v-in>
+          <h2 class="v-display h-lg">Сайт без рекламы никто не видит. Реклама без сайта <em class="mark">тратит бюджет</em></h2>
+        </div>
+        <div class="gap__cols" data-v-in data-v-stagger="90">
+          <div>
+            <h3>Только сайт</h3>
+            <p>Красивая страница, на которую заходят знакомые. В поиске её не находят, а пост в соцсетях живёт пару дней.</p>
+          </div>
+          <div>
+            <h3>Только реклама</h3>
+            <p>Объявление ведёт на страницу без цен и работ. Человек нажимает, не находит ответа и уходит – а клик уже оплачен.</p>
+          </div>
+        </div>
+        <p class="gap__fix" data-v-in-self data-v-in>Работает связка: объявление обещает, сайт отвечает, кнопка ведёт в мессенджер.</p>
+      </div>
+    </section>
+
+    <!-- 2 · ПУТЬ ЗАЯВКИ: фирменный ход. Шаг подсвечивается от прокрутки, столбики заявок растут -->
+    <section class="path" id="put" data-v-act="pin" data-v-span="2.8" data-v-drift="#f3ede2" aria-label="Как заявка доходит до вас">
+      <div data-v-stage>
+        <div class="path__in">
+          <div data-v-cue="0 1 0 0">
+            <h2 class="v-display h-lg">Как заявка доходит до вас</h2>
+            <ol class="steps" id="steps">
+              <li class="is-on"><h3>Человек ищет «маникюр рядом»</h3><p>Пишет запрос в Яндексе своими словами. Под такие запросы я и подбираю фразы для рекламы.</p></li>
+              <li><h3>Видит ваше объявление</h3><p>Короткий текст с ценой или условием – тем, ради чего стоит нажать.</p></li>
+              <li><h3>Попадает на ваш сайт</h3><p>Не на общую страницу, а туда, где сразу видно работы, цены и кнопку.</p></li>
+              <li><h3>Пишет вам в мессенджер</h3><p>Одна кнопка, без анкет. Вы получаете сообщение от человека, который уже выбрал.</p></li>
+            </ol>
+          </div>
+          <div class="scene" data-v-cue="0 1 0 0" aria-hidden="true">
+            <div class="scene__sun"></div>
+            <div class="scene__site" data-s="2"><img src="assets/work4.webp" alt="" width="1100" height="733" loading="lazy"></div>
+            <div class="scene__q" data-s="0"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4 4"/></svg>маникюр рядом</div>
+            <div class="ad scene__ad" data-s="1">
+              <span class="ad__tag">Реклама</span>
+              <div class="ad__ttl">Маникюр у дома – запись онлайн</div>
+              <div class="ad__url">сайт-мастера.рф</div>
+            </div>
+            <div class="ad scene__leads" data-s="3">
+              <div class="ad__cap"><span>Заявки с рекламы</span><b>↑</b></div>
+              <div class="ad__bars"><i style="--b:28"></i><i style="--b:40"></i><i style="--b:36"></i><i style="--b:58"></i><i style="--b:72"></i><i style="--b:100"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · РАБОТЫ: боковая лента, пять сайтов из портфолио -->
+    <section class="v-section--tight" data-v-act="pan" data-v-span="4.2" id="raboty" aria-label="Работы">
+      <div data-v-stage>
+        <div class="gal">
+          <div class="gal__rail" data-v-pan="0.02">
+            <div class="gal__intro" data-v-cue="0 1 0 0">
+              <h2 class="v-display h-lg">Пять сайтов под пять разных ниш</h2>
+              <p>Цвета, шрифты и порядок блоков подбираю под бизнес, а не ставлю один шаблон на всех.</p>
+              <a class="v-btn" href="https://t.me/loyolya" target="_blank" rel="noopener">Написать в Telegram</a>
+            </div>
+
+            <figure class="work">
+              <a class="work__img" href="https://golgenangelsb7-prog.github.io/akter-demo-2/" target="_blank" rel="noopener" data-v-tilt="4">
+                <img src="assets/work1.webp" alt="Сайт школы актёрского мастерства на ноутбуке и телефоне" width="1100" height="733" loading="lazy">
+              </a>
+              <figcaption>
+                <h3>Школа актёрского мастерства</h3>
+                <p>Запись на пробное занятие, программа по этапам, педагог. Перенесён в Тильду.</p>
+                <a class="work__link" href="https://golgenangelsb7-prog.github.io/akter-demo-2/" target="_blank" rel="noopener">Открыть сайт</a>
+              </figcaption>
+            </figure>
+
+            <figure class="work">
+              <div class="work__img" data-v-tilt="4"><img src="assets/work2.webp" alt="Сайт мастерской вязаных изделий на ноутбуке и телефоне" width="1100" height="733" loading="lazy"></div>
+              <figcaption>
+                <h3>Мастерская вязаных изделий</h3>
+                <p>Витрина с лентой изделий, каталог, советы по уходу и кнопка написать мастеру.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="work">
+              <a class="work__img" href="https://golgenangelsb7-prog.github.io/portfolio-fotograf/" target="_blank" rel="noopener" data-v-tilt="4">
+                <img src="assets/work3.webp" alt="Сайт фотографа на ноутбуке и телефоне" width="1100" height="733" loading="lazy">
+              </a>
+              <figcaption>
+                <h3>Фотограф</h3>
+                <p>Работы лентой, форматы и цены съёмок, подбор образа. На настоящих фото фотографа.</p>
+                <a class="work__link" href="https://golgenangelsb7-prog.github.io/portfolio-fotograf/" target="_blank" rel="noopener">Открыть сайт</a>
+              </figcaption>
+            </figure>
+
+            <figure class="work">
+              <div class="work__img" data-v-tilt="4"><img src="assets/work4.webp" alt="Сайт студии маникюра на ноутбуке и телефоне" width="1100" height="733" loading="lazy"></div>
+              <figcaption>
+                <h3>Студия маникюра</h3>
+                <p>Лента работ с техникой и временем, услуги с ценами, стерильность, запись в мессенджер.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="work">
+              <div class="work__img" data-v-tilt="4"><img src="assets/work5.webp" alt="Сайт электрика с вызовом на дом на ноутбуке и телефоне" width="1100" height="733" loading="lazy"></div>
+              <figcaption>
+                <h3>Электрик с вызовом на дом</h3>
+                <p>Две типовые проблемы на первом экране и трекер «Где сейчас мастер» от заявки до работы.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · ПАКЕТЫ: строки с линиями -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f6f1e8" id="pakety" aria-label="Пакеты">
+      <div class="v-wrap packs">
+        <div class="packs__head" data-v-in data-v-stagger="60">
+          <h2 class="v-display h-lg">Что входит и сколько ждать</h2>
+          <p>Цену называю после короткого разговора о вашем бизнесе: она зависит от объёма текстов и фото.</p>
+          <ul class="terms">
+            <li><span>Сайт адаптирован под телефон</span></li>
+            <li><span>Нет своих фото – подберу изображения под стиль, потом их легко заменить</span></li>
+            <li><span>В цену не входят домен, тариф Тильды и рекламный бюджет</span></li>
+            <li><span><b>Работаю официально:</b> я самозанятая, заключаем договор, после оплаты – чек</span></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="rows" data-v-in data-v-stagger="50">
+            <li><h3>Сайт по ссылке</h3><span class="time">3 дня</span><span class="price">уточнить</span><p>Одностраничный сайт с кнопкой в мессенджер на живой ссылке. Один круг правок.</p></li>
+            <li><h3>Сайт в Тильде</h3><span class="time">5 дней</span><span class="price">уточнить</span><p>Всё из первого пакета, перенос в вашу Тильду и подключение вашего домена. Два круга правок.</p></li>
+            <li><h3>Сайт и месяц поддержки</h3><span class="time">7 дней</span><span class="price">уточнить</span><p>Всё из второго пакета, базовое SEO: заголовок и описание для поисковиков, превью ссылки в мессенджерах. Три круга правок и месяц правок после сдачи.</p></li>
+            <li><h3>Настройка Яндекс Директа</h3><span class="time">по задаче</span><span class="price">уточнить</span><p>Фразы под ваши услуги и город, объявления и кампания, которая ведёт на ваш сайт.</p></li>
+            <li class="is-pair"><h3>Сайт и Директ вместе</h3><span class="time">по задаче</span><span class="price">уточнить</span><p>Любой пакет сайта и реклама на него – объявление и страница говорят одно и то же.</p></li>
+          </ul>
+          <div class="cta" data-v-in>
+            <a class="v-btn" href="https://t.me/loyolya" target="_blank" rel="noopener">Написать в Telegram</a>
+            <span>Напишите, чем вы занимаетесь: подскажу, какой пакет подойдёт, и назову цену.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4б · БЕЗ ПОСРЕДНИКОВ: короткая заявка, уходит в Telegram -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f3ede2" id="zayavka" aria-label="Заявка">
+      <div class="v-wrap">
+        <div class="solo__head" data-v-in data-v-stagger="70">
+          <h2 class="v-display h-lg">Не переплачивайте <em class="mark">агентствам</em></h2>
+          <p>У меня нет менеджеров: <b>я сама собираю сайт, сама настраиваю рекламу и сама отвечаю</b>. Самозанятая, работаю по договору.</p>
+        </div>
+        <div class="solo__box" data-v-in-self data-v-in>
+          <div class="solo__ask">
+            <h3>Начнём с короткого разговора?</h3>
+            <p>Расскажите о бизнесе – отвечу, что подойдёт и сколько это будет стоить. Это ни к чему не обязывает.</p>
+          </div>
+          <form class="lead" id="lead" novalidate>
+            <label>Ваше имя<input type="text" name="name" autocomplete="given-name" placeholder="Например, Анна"></label>
+            <label>Чем вы занимаетесь<input type="text" name="biz" placeholder="Например, маникюр на дому"></label>
+            <label>Адрес вашего сайта или страницы<input type="text" name="site" inputmode="url" placeholder="Если есть"></label>
+            <button class="v-btn" type="submit">Отправить заявку</button>
+            <span class="lead__note" id="lead-note" role="status">Заявка откроется в Telegram – останется нажать «Отправить».</span>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · ОБО МНЕ И ПОРЯДОК РАБОТЫ -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#f3ede2" id="obo-mne" aria-label="Обо мне">
+      <div class="v-wrap me">
+        <figure class="me__fig" data-v-reveal="up" data-v-reveal-at="0.1 0.5">
+          <img src="assets/olga-park.webp" alt="Ольга Белова на скамейке в осеннем парке" width="900" height="1200" loading="lazy">
+        </figure>
+        <div class="me__copy" data-v-in data-v-stagger="70">
+          <h2 class="v-display h-lg">Я Ольга. Делаю сайты и рекламу <em class="mark">под вашу нишу</em></h2>
+          <p>Работаю удалённо, на связи в мессенджере. Я самозанятая и работаю по договору. Вот как это проходит:</p>
+          <ol class="how">
+            <li>Вы присылаете описание услуг, цены, контакты и фото.</li>
+            <li>Я собираю сайт и присылаю живую ссылку – смотрите с телефона и компьютера.</li>
+            <li>Вношу правки по вашим комментариям.</li>
+            <li>Оставляю сайт по ссылке или переношу в Тильду, чтобы вы могли править его сами.</li>
+            <li>Если нужна реклама – настраиваю Директ так, чтобы он вёл на этот сайт.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Сертификаты: пустые рамки-места. Чтобы вставить, скажите Claude «поставь сертификаты из папки …»:
+           рамка станет ссылкой <a class="cert__frame" href="assets/certN.webp"> с картинкой внутри. -->
+      <div class="v-wrap certs" data-v-in data-v-stagger="70">
+        <h3>Обучение и сертификаты</h3>
+        <p>Курсы, которые я прошла по сайтам и рекламе.</p>
+        <div class="certs__row">
+          <figure class="cert">
+            <div class="cert__frame"></div>
+            <figcaption><b>{{курс-1}}</b>{{школа-1}}, {{год-1}}</figcaption>
+          </figure>
+          <figure class="cert">
+            <div class="cert__frame"></div>
+            <figcaption><b>{{курс-2}}</b>{{школа-2}}, {{год-2}}</figcaption>
+          </figure>
+          <figure class="cert">
+            <div class="cert__frame"></div>
+            <figcaption><b>{{курс-3}}</b>{{школа-3}}, {{год-3}}</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · КВИЗ (последний блок): 4 вопроса, бонус – неделя ведения Директа. Ответы уходят в Telegram -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#f3ede2" id="bonus" aria-label="4 вопроса и бонус">
+      <div class="v-wrap">
+        <div class="quiz__head" data-v-in>
+          <h2 class="v-display h-lg">Ответьте на 4 вопроса – получите <em class="mark">неделю ведения Директа</em> бесплатно</h2>
+        </div>
+        <div class="quiz__box" data-v-in data-v-stagger="80">
+          <form class="quiz__card" id="quiz" novalidate>
+            <div class="quiz__prog" aria-hidden="true"><b id="quiz-n">Вопрос 1 из 4</b><span><i class="is-done"></i><i></i><i></i><i></i></span></div>
+
+            <fieldset class="q is-on">
+              <legend>1. У вас уже есть сайт?</legend>
+              <div class="q__opts">
+                <label class="q__opt"><input type="radio" name="sait" value="Да, есть сайт">Да, есть сайт</label>
+                <label class="q__opt"><input type="radio" name="sait" value="Есть только страница во ВК или на Картах">Есть только страница во ВК или на Картах</label>
+                <label class="q__opt"><input type="radio" name="sait" value="Нет, нужен сайт">Нет, нужен сайт</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="q">
+              <legend>2. Чем вы занимаетесь?</legend>
+              <div class="q__opts">
+                <label class="q__opt"><input type="radio" name="biznes" value="Красота: ногти, волосы, брови">Красота: ногти, волосы, брови</label>
+                <label class="q__opt"><input type="radio" name="biznes" value="Мастер с выездом: ремонт, электрика, уборка">Мастер с выездом: ремонт, электрика, уборка</label>
+                <label class="q__opt"><input type="radio" name="biznes" value="Обучение и студии">Обучение и студии</label>
+                <label class="q__opt"><input type="radio" name="biznes" value="Товары и ручная работа">Товары и ручная работа</label>
+                <label class="q__opt"><input type="radio" name="biznes" value="Другое">Другое</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="q">
+              <legend>3. Запускали рекламу в Яндекс Директе?</legend>
+              <div class="q__opts">
+                <label class="q__opt"><input type="radio" name="direkt" value="Нет, ни разу">Нет, ни разу</label>
+                <label class="q__opt"><input type="radio" name="direkt" value="Да, сам(а)">Да, сам(а)</label>
+                <label class="q__opt"><input type="radio" name="direkt" value="Да, через специалиста">Да, через специалиста</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="q">
+              <legend>4. Что нужно сейчас?</legend>
+              <div class="q__opts">
+                <label class="q__opt"><input type="radio" name="nado" value="Сайт">Сайт</label>
+                <label class="q__opt"><input type="radio" name="nado" value="Реклама в Директе">Реклама в Директе</label>
+                <label class="q__opt"><input type="radio" name="nado" value="Сайт и реклама вместе">Сайт и реклама вместе</label>
+              </div>
+            </fieldset>
+
+            <div class="quiz__done" aria-live="polite">
+              <h3>Готово, бонус ваш</h3>
+              <p>Отправьте ответы мне в Telegram – они скопируются, останется вставить их в чат. Отвечу и расскажу, как начнём.</p>
+              <ul class="quiz__sum" id="quiz-sum"></ul>
+            </div>
+
+            <div class="quiz__nav">
+              <button class="v-btn" type="button" id="quiz-next" disabled>Далее</button>
+              <a class="v-btn" href="https://t.me/loyolya" target="_blank" rel="noopener" id="quiz-send" hidden>Отправить ответы в Telegram</a>
+              <button class="quiz__back" type="button" id="quiz-back" hidden>Назад</button>
+              <span class="quiz__note" id="quiz-note" role="status"></span>
+            </div>
+          </form>
+
+          <aside class="bonus" aria-label="Бонус">
+            <span class="ad__tag">Бонус</span>
+            <h3>Неделя ведения Директа – бесплатно</h3>
+            <p>За ответы на 4 вопроса первую неделю я веду вашу рекламу в Яндекс Директе без оплаты.</p>
+            <small>Бюджет на показы рекламы оплачивается отдельно.</small>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · ЧАСТЫЕ ВОПРОСЫ (последний блок): нативные details, ответы только из того, что есть в брифе -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#f6f1e8" id="voprosy" aria-label="Частые вопросы">
+      <div class="v-wrap faq">
+        <div class="faq__head" data-v-in>
+          <h2 class="v-display h-lg">Ответы на <em class="mark">частые вопросы</em></h2>
+          <p>Не нашли свой – напишите, отвечу в Telegram.</p>
+          <a class="v-btn" href="https://t.me/loyolya" target="_blank" rel="noopener">Написать в Telegram</a>
+        </div>
+        <div class="faq__list" data-v-in data-v-stagger="50">
+          <details>
+            <summary>Сколько стоит сайт?</summary>
+            <p>Зависит от объёма текстов и фото. Цену называю после короткого разговора о вашем бизнесе – напишите, чем занимаетесь, и я сориентирую.</p>
+          </details>
+          <details>
+            <summary>Сколько времени займёт работа?</summary>
+            <p>Сайт по живой ссылке – 3 дня, сайт в Тильде – 5 дней, сайт с месяцем поддержки – 7 дней. Срок настройки Директа зависит от задачи, назову его до начала.</p>
+          </details>
+          <details>
+            <summary>Что нужно от меня?</summary>
+            <p>Чем вы занимаетесь и для кого, услуги или товары с ценами, город, контакты для кнопки, фото работ, если есть. Логотип и цвета – тоже, если есть. Плюс 1–2 сайта, которые вам нравятся.</p>
+          </details>
+          <details>
+            <summary>У меня нет своих фото. Что делать?</summary>
+            <p>Подберу изображения под стиль сайта. Когда появятся ваши фото, их легко поставить вместо подобранных.</p>
+          </details>
+          <details>
+            <summary>Смогу ли я править сайт без вас?</summary>
+            <p>Да, если перенести его в вашу Тильду – это пакет «Сайт в Тильде». Тогда тексты, цены и фото меняете сами, без меня.</p>
+          </details>
+          <details>
+            <summary>Что не входит в цену?</summary>
+            <p>Покупка домена, тариф Тильды и рекламный бюджет – их вы оплачиваете отдельно.</p>
+          </details>
+          <details>
+            <summary>Как вы работаете официально?</summary>
+            <p>Я самозанятая. Заключаем договор, после оплаты присылаю чек.</p>
+          </details>
+          <details>
+            <summary>Как получить неделю ведения Директа бесплатно?</summary>
+            <p>Ответьте на 4 вопроса в блоке выше и отправьте ответы мне в Telegram. Первую неделю веду вашу рекламу без оплаты, бюджет на показы оплачивается отдельно.</p>
+          </details>
+        </div>
+        <footer class="foot foot--end">
+          <span>Ольга Белова · сайты и Яндекс Директ · самозанятая</span>
+          <span><a href="https://t.me/loyolya" target="_blank" rel="noopener">Telegram</a> · <a href="https://vk.ru/club237399090" target="_blank" rel="noopener">ВКонтакте</a> · работаю удалённо</span>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Ольга Белова – сайты и Яндекс Директ",
+  "description": "Одностраничные сайты для мастеров и малого бизнеса и настройка рекламы в Яндекс Директе.",
+  "url": "{{ссылка-сайта}}",
+  "image": "{{ссылка-сайта}}/assets/og.jpg",
+  "sameAs": ["https://t.me/loyolya", "https://vk.ru/club237399090"]
+}
+</script>
+
+<script src="vibe.js"></script>
+<script>
+  (function () {
+    var gal = document.getElementById('raboty');
+    var stage = gal.querySelector('[data-v-stage]');
+    var intro = gal.querySelector('.gal__intro');
+    // Тач: лента листается пальцем. Вводный текст выносим над лентой,
+    // чтобы лента начиналась с первой работы целиком.
+    if (window.matchMedia('(pointer: coarse)').matches) {
+      gal.insertBefore(intro, stage);
+      gal.classList.add('gal--touch');
+    }
+
+    Vibe.mount(document.querySelector('.v-page'));
+
+    // Фирменный ход: путь заявки. Шаг – из --v-p акта; активный план сцены поднимается,
+    // остальные отходят. Столбики заявок растут в CSS от той же --v-p.
+    var act = document.getElementById('put');
+    var steps = Array.prototype.slice.call(act.querySelectorAll('.steps li'));
+    var parts = Array.prototype.slice.call(act.querySelectorAll('.scene [data-s]'));
+    var cuts = [0.22, 0.45, 0.66];
+    var last = -1, live = false;
+    function tick() {
+      var p = parseFloat(getComputedStyle(act).getPropertyValue('--v-p')) || 0;
+      var s = 0; while (s < cuts.length && p >= cuts[s]) s++;
+      if (s !== last) {
+        last = s;
+        steps.forEach(function (li, i) { li.classList.toggle('is-on', i === s); });
+        parts.forEach(function (el) {
+          var k = +el.getAttribute('data-s');
+          el.classList.toggle('is-up', k === s);
+          el.classList.toggle('is-dim', k !== s);
+        });
+      }
+      if (live) requestAnimationFrame(tick);
+    }
+    new IntersectionObserver(function (es) { live = es[0].isIntersecting; if (live) tick(); }).observe(act);
+    tick();
+
+    // Квиз: по одному вопросу; «Далее» включается после выбора. В конце ответы
+    // копируются в буфер и открывается чат в Telegram (своего сервера у сайта нет).
+    var form = document.getElementById('quiz');
+    var qs = Array.prototype.slice.call(form.querySelectorAll('.q'));
+    var bars = form.querySelectorAll('.quiz__prog i');
+    var done = form.querySelector('.quiz__done');
+    var next = document.getElementById('quiz-next'), back = document.getElementById('quiz-back');
+    var send = document.getElementById('quiz-send'), note = document.getElementById('quiz-note');
+    var nLabel = document.getElementById('quiz-n'), sum = document.getElementById('quiz-sum');
+    var cur = 0;
+    form.classList.add('js-quiz');
+    function answer(i) { var c = qs[i].querySelector('input:checked'); return c ? c.value : ''; }
+    function show(i) {
+      cur = i;
+      var fin = i >= qs.length;
+      qs.forEach(function (q, k) { q.classList.toggle('is-on', k === i); });
+      done.classList.toggle('is-on', fin);
+      Array.prototype.forEach.call(bars, function (b, k) { b.classList.toggle('is-done', k <= i); });
+      nLabel.textContent = fin ? 'Все ответы' : 'Вопрос ' + (i + 1) + ' из ' + qs.length;
+      next.hidden = fin; send.hidden = !fin; back.hidden = i === 0;
+      next.disabled = !fin && !answer(i);
+      note.textContent = '';
+      if (fin) {
+        sum.innerHTML = '';
+        qs.forEach(function (q, k) { var li = document.createElement('li'); li.textContent = answer(k); sum.appendChild(li); });
+      }
+    }
+    form.addEventListener('change', function () { next.disabled = !answer(cur); });
+    next.addEventListener('click', function () { if (answer(cur)) show(cur + 1); });
+    back.addEventListener('click', function () { show(cur - 1); });
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    // Копирование синхронно, в том же клике: так браузер не блокирует открытие Telegram,
+    // а вкладка с чатом не отнимает фокус до того, как текст попал в буфер.
+    function copyNow(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0';
+      document.body.appendChild(ta); ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (err) {}
+      ta.remove();
+      if (!ok && navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).catch(function () {}); ok = true; }
+      return ok;
+    }
+    // ссылка send сама открывает чат (обычный переход по <a>), здесь только копируем
+    send.addEventListener('click', function () {
+      var text = 'Здравствуйте! Хочу неделю ведения Директа в подарок. Мои ответы:\n' +
+        qs.map(function (q, k) { return q.querySelector('legend').textContent + ' – ' + answer(k); }).join('\n');
+      note.textContent = copyNow(text) ? 'Ответы скопированы – вставьте их в чат.' : 'Не удалось скопировать – просто перечислите ответы в чате.';
+    });
+    show(0);
+
+    // Заявка: своего сервера нет – собираем текст, копируем и открываем чат в Telegram.
+    var lead = document.getElementById('lead'), leadNote = document.getElementById('lead-note');
+    lead.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = function (n) { return lead.elements[n].value.trim(); };
+      if (!v('name') && !v('biz')) { leadNote.textContent = 'Напишите хотя бы имя или чем вы занимаетесь.'; lead.elements.name.focus(); return; }
+      var text = 'Здравствуйте! Хочу обсудить сайт и рекламу.' +
+        (v('name') ? '\nИмя: ' + v('name') : '') + (v('biz') ? '\nЧем занимаюсь: ' + v('biz') : '') + (v('site') ? '\nСайт: ' + v('site') : '');
+      leadNote.textContent = copyNow(text) ? 'Заявка скопирована – вставьте её в открывшийся чат.' : 'Не удалось скопировать – напишите эти строки в чате.';
+      window.open('https://t.me/loyolya', '_blank', 'noopener');
+    });
+  })();
+</script>
+</body>
+</html>
