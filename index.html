@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex, nofollow" data-publish>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ольга Белова · сайты и Яндекс Директ</title>
-<meta name="description" content="Одностраничные сайты для мастеров и малого бизнеса и настройка рекламы в Яндекс Директе, которая ведёт на этот сайт.">
+<meta name="description" content="Сайты-визитки, Яндекс Директ, Метрика и карточка в Яндекс Бизнесе для малого бизнеса – в одних руках. Бесплатный разбор перед работой.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ольга Белова · сайты и Яндекс Директ">
 <meta property="og:description" content="Сайт и реклама в Директе для мастеров и малого бизнеса – в одних руках.">
@@ -270,6 +270,17 @@
   .rows li.is-pair { background: linear-gradient(90deg, rgb(255 207 63 / .22), transparent 70%); border-radius: 0; padding-inline: var(--v-4); margin-inline: calc(-1 * var(--v-4)); }
   .cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-5); margin-top: var(--v-7); }
   .cta span { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 34ch; text-wrap: pretty; }
+  .rows__lbl { font-size: var(--v-t-xs); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--v-ink-soft); margin-bottom: var(--v-3); }
+  .rows + .rows__lbl { margin-top: var(--v-7); }
+
+  /* ---- 4а · бесплатно: 4 пункта в две колонки + плашка «Приведи коллегу» ------- */
+  .free__cols { row-gap: var(--v-6); }
+  .friend { margin-top: var(--v-8); display: flex; gap: var(--v-5); align-items: flex-start; background: var(--brand-sand); border-radius: var(--v-radius); padding: clamp(1.25rem, 3vw, 2rem); }
+  .friend .ad__tag { flex: none; margin-top: .3em; }
+  .friend h3 { font-size: var(--v-t-xl); line-height: 1.2; letter-spacing: -0.02em; text-wrap: balance; }
+  .v-page .friend p { margin-top: var(--v-3); color: var(--v-ink-soft); }
+  @media (max-width: 760px) { .friend { flex-direction: column; gap: var(--v-3); margin-top: var(--v-7); } }
+
   @media (max-width: 860px) {
     .packs { grid-template-columns: 1fr; gap: var(--v-7); }
     .rows li { grid-template-columns: minmax(0, 1fr) auto; }
@@ -357,7 +368,8 @@
     <nav class="index" aria-label="Разделы">
       <a href="#put">Как это работает</a>
       <a href="#raboty">Работы</a>
-      <a href="#pakety">Пакеты</a>
+      <a href="#pakety">Цены</a>
+      <a href="#besplatno">Бесплатно</a>
       <a href="#obo-mne">Обо мне</a>
       <a href="#bonus">Бонус</a>
       <a href="#voprosy">Вопросы</a>
@@ -387,10 +399,10 @@
         <div class="hero__copy">
           <div data-v-cue="0 0.8 0">
             <span class="v-label"><i aria-hidden="true"></i><span class="lbl-name">Ольга Белова · </span>сайты и Яндекс Директ</span>
-            <h1 class="v-display h-xl">Сайт и Яндекс Директ для мастеров – <em class="mark">в одних руках</em></h1>
-            <p>Соберу одностраничный сайт и настрою рекламу, которая ведёт на него. Живая ссылка на сайт – через 3 дня.</p>
-            <a class="v-btn" href="https://t.me/loyolya" target="_blank" rel="noopener" data-v-magnet="0.2" data-v-rise="0">Написать в Telegram</a>
-            <div class="hero__chips"><span>Сайты для малого бизнеса</span><span>Яндекс Директ</span><span>Перенос в Тильду</span></div>
+            <h1 class="v-display h-xl">Сайт, реклама и Яндекс Карты – <em class="mark">в одних руках</em></h1>
+            <p>Делаю сайт-визитку, настраиваю Яндекс Директ, Метрику и карточку в Яндекс Бизнесе. Начинаю с бесплатного разбора.</p>
+            <a class="v-btn" href="https://t.me/loyolya" target="_blank" rel="noopener" data-v-magnet="0.2" data-v-rise="0">Бесплатный разбор в Telegram</a>
+            <div class="hero__chips"><span>Сайты-визитки</span><span>Яндекс Директ</span><span>Метрика и Яндекс Бизнес</span></div>
           </div>
         </div>
       </div>
@@ -512,26 +524,55 @@
     <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f6f1e8" id="pakety" aria-label="Пакеты">
       <div class="v-wrap packs">
         <div class="packs__head" data-v-in data-v-stagger="60">
-          <h2 class="v-display h-lg">Что входит и сколько ждать</h2>
-          <p>Цену называю после короткого разговора о вашем бизнесе: она зависит от объёма текстов и фото.</p>
+          <h2 class="v-display h-lg">Пакеты и цены</h2>
+          <p>Можно взять что-то одно, а можно всё под ключ – тогда сайт, реклама и Карты работают в связке.</p>
           <ul class="terms">
             <li><span>Сайт адаптирован под телефон</span></li>
             <li><span>Нет своих фото – подберу изображения под стиль, потом их легко заменить</span></li>
-            <li><span>В цену не входят домен, тариф Тильды и рекламный бюджет</span></li>
+            <li><span>В цену не входят домен, тариф Тильды и бюджет на показы рекламы – он идёт напрямую Яндексу</span></li>
+            <li><span>После бонусных недель ведение Директа – от 8 000 ₽ в месяц, по желанию</span></li>
             <li><span><b>Работаю официально:</b> я самозанятая, заключаем договор, после оплаты – чек</span></li>
           </ul>
         </div>
         <div>
+          <h3 class="rows__lbl" data-v-in>Под ключ</h3>
           <ul class="rows" data-v-in data-v-stagger="50">
-            <li><h3>Сайт по ссылке</h3><span class="time">3 дня</span><span class="price">уточнить</span><p>Одностраничный сайт с кнопкой в мессенджер на живой ссылке. Один круг правок.</p></li>
-            <li><h3>Сайт в Тильде</h3><span class="time">5 дней</span><span class="price">уточнить</span><p>Всё из первого пакета, перенос в вашу Тильду и подключение вашего домена. Два круга правок.</p></li>
-            <li><h3>Сайт и месяц поддержки</h3><span class="time">7 дней</span><span class="price">уточнить</span><p>Всё из второго пакета, базовое SEO: заголовок и описание для поисковиков, превью ссылки в мессенджерах. Три круга правок и месяц правок после сдачи.</p></li>
-            <li><h3>Настройка Яндекс Директа</h3><span class="time">по задаче</span><span class="price">уточнить</span><p>Фразы под ваши услуги и город, объявления и кампания, которая ведёт на ваш сайт.</p></li>
-            <li class="is-pair"><h3>Сайт и Директ вместе</h3><span class="time">по задаче</span><span class="price">уточнить</span><p>Любой пакет сайта и реклама на него – объявление и страница говорят одно и то же.</p></li>
+            <li class="is-pair"><h3>Старт: сайт + реклама</h3><span class="price">18 000 ₽</span><p>Сайт-визитка и Яндекс Директ на него. Метрика и неделя ведения рекламы – в подарок. По отдельности – 21 000 ₽.</p></li>
+            <li class="is-pair"><h3>Ультра. Всё включено</h3><span class="price">27 000 ₽</span><p>Сайт, Яндекс Директ, Метрика с целями, карточка в Яндекс Бизнесе и оформление сообщества ВК. В подарок – две недели ведения рекламы, отчёт простыми словами и месяц мелких правок сайта.</p></li>
+          </ul>
+          <h3 class="rows__lbl" data-v-in>Что-то одно</h3>
+          <ul class="rows" data-v-in data-v-stagger="50">
+            <li><h3>Сайт-визитка</h3><span class="time">от 3 дней</span><span class="price">10 000 ₽</span><p>Одностраничный сайт с кнопкой в мессенджер. Два круга правок. Оставлю по ссылке или перенесу в вашу Тильду.</p></li>
+            <li><h3>Настройка Яндекс Директа</h3><span class="price">9 000 ₽</span><p>Разбор ниши и конкурентов, фразы под ваш город, объявления и кампания – на мой сайт или на ваш. Неделя ведения в подарок.</p></li>
+            <li><h3>Яндекс Метрика</h3><span class="price">2 000 ₽</span><p>Подключу и настрою цели: заявки, клики на мессенджеры, звонки.</p></li>
+            <li><h3>Карточка в Яндекс Бизнесе</h3><span class="price">3 000 ₽</span><p>Описание, услуги и цены, фото, контакты – чтобы вас находили на Картах.</p></li>
+            <li><h3>Оформление сообщества ВК</h3><span class="price">6 000 ₽</span><p>Аватар, обложка, меню, описание, закреплённый пост и тексты.</p></li>
           </ul>
           <div class="cta" data-v-in>
             <a class="v-btn" href="https://t.me/loyolya" target="_blank" rel="noopener">Написать в Telegram</a>
-            <span>Напишите, чем вы занимаетесь: подскажу, какой пакет подойдёт, и назову цену.</span>
+            <span>Не знаете, что выбрать? Напишите, чем занимаетесь – бесплатно разберу и подскажу.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4а · БЕСПЛАТНО: разбор до оплаты + «Приведи коллегу» -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f6f1e8" id="besplatno" aria-label="Бесплатно">
+      <div class="v-wrap">
+        <div class="gap__head" data-v-in>
+          <h2 class="v-display h-lg">Сначала разберусь – <em class="mark">потом возьму деньги</em></h2>
+        </div>
+        <div class="gap__cols free__cols" data-v-in data-v-stagger="90">
+          <div><h3>Консультация</h3><p>20 минут: расскажете о бизнесе, подскажу, с чего начать.</p></div>
+          <div><h3>Аудит рекламного кабинета</h3><p>Если Директ уже есть – посмотрю, куда уходят деньги и что поправить.</p></div>
+          <div><h3>Анализ конкурентов и ниши</h3><p>Сколько стоит клик в вашей теме и как рекламируются конкуренты.</p></div>
+          <div><h3>Разбор сайта</h3><p>Что мешает человеку оставить заявку и что поправить перед запуском рекламы.</p></div>
+        </div>
+        <div class="friend" data-v-in-self data-v-in>
+          <span class="ad__tag">Акция</span>
+          <div>
+            <h3>Приведите коллегу – вам обоим неделя ведения рекламы в подарок</h3>
+            <p>Коллега называет ваше имя, когда пишет мне.</p>
           </div>
         </div>
       </div>
@@ -683,11 +724,15 @@
         <div class="faq__list" data-v-in data-v-stagger="50">
           <details>
             <summary>Сколько стоит сайт?</summary>
-            <p>Зависит от объёма текстов и фото. Цену называю после короткого разговора о вашем бизнесе – напишите, чем занимаетесь, и я сориентирую.</p>
+            <p>Сайт-визитка – 10 000 ₽. Сайт вместе с рекламой – пакет «Старт» за 18 000 ₽, всё под ключ – «Ультра» за 27 000 ₽.</p>
           </details>
           <details>
             <summary>Сколько времени займёт работа?</summary>
-            <p>Сайт по живой ссылке – 3 дня, сайт в Тильде – 5 дней, сайт с месяцем поддержки – 7 дней. Срок настройки Директа зависит от задачи, назову его до начала.</p>
+            <p>Первую версию сайта присылаю через 3 дня, с переносом в Тильду – около 5 дней. Сроки для Директа и остального назову до начала.</p>
+          </details>
+          <details>
+            <summary>Что можно получить бесплатно?</summary>
+            <p>Консультацию, аудит рекламного кабинета, анализ конкурентов и ниши, разбор сайта. Это ни к чему не обязывает.</p>
           </details>
           <details>
             <summary>Что нужно от меня?</summary>
@@ -699,7 +744,7 @@
           </details>
           <details>
             <summary>Смогу ли я править сайт без вас?</summary>
-            <p>Да, если перенести его в вашу Тильду – это пакет «Сайт в Тильде». Тогда тексты, цены и фото меняете сами, без меня.</p>
+            <p>Да, если перенести его в вашу Тильду. Тогда тексты, цены и фото меняете сами, без меня.</p>
           </details>
           <details>
             <summary>Что не входит в цену?</summary>
@@ -712,6 +757,10 @@
           <details>
             <summary>Как получить неделю ведения Директа бесплатно?</summary>
             <p>Ответьте на 4 вопроса в блоке выше и отправьте ответы мне в Telegram. Первую неделю веду вашу рекламу без оплаты, бюджет на показы оплачивается отдельно.</p>
+          </details>
+          <details>
+            <summary>Как работает «Приведи коллегу»?</summary>
+            <p>Коллега пишет мне и называет ваше имя. Когда коллега закажет рекламу, вы оба получаете неделю ведения Директа в подарок.</p>
           </details>
         </div>
         <footer class="foot foot--end">
