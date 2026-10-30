@@ -67,10 +67,12 @@
   .bar .v-btn { padding: .75em 1.3em; }
   .bar__btns { display: flex; gap: var(--v-2); align-items: center; }
   .bar .v-btn--ghost { padding-inline: 1.05em; box-shadow: inset 0 0 0 1.5px var(--v-hair-strong); }
+  .bar .bar__cta { font-size: 1.1em; font-weight: 700; padding: .9em 1.9em; margin-left: var(--v-2); }
+  #zayavka { scroll-margin-top: 64px; }
   .t-short { display: none; }
   @media (max-width: 520px) { .bar .t-long { display: none; } .bar .t-short { display: inline; } }
   @media (max-width: 1180px) { .index { display: none; } }
-  @media (max-width: 420px) { .bar .v-btn { padding: .65em 1em; } }
+  @media (max-width: 420px) { .bar .v-btn { padding: .65em 1em; } .bar .v-btn--ghost { padding-inline: .8em; } .bar .bar__cta { font-size: 1.02em; padding: .8em 1.05em; margin-left: 0; } .bar, .bar__btns { gap: 6px; } }
 
   /* ---- 0 · первый экран: текст слева, арка с фото на жёлтом круге справа ------ */
   .hero [data-v-stage] { --h: min(82svh, 780px); }
@@ -391,7 +393,8 @@
     </nav>
     <div class="bar__btns">
       <a class="v-btn v-btn--ghost" href="https://vk.ru/club237399090" target="_blank" rel="noopener" aria-label="Написать во ВКонтакте">ВК</a>
-      <a class="v-btn" href="https://t.me/loyolya" target="_blank" rel="noopener" aria-label="Написать в Telegram"><span class="t-long">Написать в Telegram</span><span class="t-short">Telegram</span></a>
+      <a class="v-btn v-btn--ghost" href="https://t.me/loyolya" target="_blank" rel="noopener" aria-label="Написать в Telegram"><span class="t-long">Telegram</span><span class="t-short">ТГ</span></a>
+      <a class="v-btn bar__cta" href="#zayavka"><span class="t-long">Оставить заявку</span><span class="t-short">Заявка</span></a>
     </div>
   </header>
 
