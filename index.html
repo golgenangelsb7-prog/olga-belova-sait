@@ -249,7 +249,7 @@
   @media (hover: hover) and (pointer: fine) { .q__opt:hover { background: var(--v-surface); } }
   .quiz__nav { margin-top: auto; padding-top: var(--v-6); display: flex; gap: var(--v-3); align-items: center; flex-wrap: wrap; }
   .quiz__nav [hidden] { display: none; }
-  .v-page button.v-btn, .v-page .lead button.v-btn { background: var(--v-accent); color: var(--v-accent-ink); }
+  .v-page button.v-btn { background: var(--v-accent); color: var(--v-accent-ink); }
   .quiz__nav .v-btn[disabled] { opacity: .45; pointer-events: none; box-shadow: none; }
   .quiz__back { font-size: var(--v-t-sm); font-weight: 600; color: var(--v-ink-soft); padding: .6em .4em; }
   .quiz__done { margin-top: var(--v-5); }
@@ -309,26 +309,10 @@
     .rows .price { grid-column: 2; }
   }
 
-  /* ---- 4б · без посредников: короткая заявка в Telegram ------------------------- */
+  /* ---- 4б · без посредников ------------------------------------------------------ */
   .solo__head .v-display { max-width: 18ch; }
   .v-page .solo__head p { margin-top: var(--v-4); font-size: var(--v-t-lg); color: var(--v-ink-soft); max-width: 46ch; }
   .solo__head p b { color: var(--v-ink); font-weight: 700; }
-  .solo__box { margin-top: var(--v-7); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--v-6); align-items: center;
-    background: var(--brand-sand); border-radius: var(--v-radius); padding: clamp(1.25rem, 3vw, 2.5rem); }
-  .solo__ask { padding: var(--v-4) clamp(0rem, 3vw, 2.5rem); }
-  .solo__ask h3 { font-size: var(--v-t-xl); line-height: 1.2; letter-spacing: -0.02em; text-wrap: balance; }
-  .v-page .solo__ask p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 36ch; }
-  .lead { background: var(--v-surface); border-radius: var(--v-radius); padding: clamp(1.25rem, 2.5vw, 2rem); box-shadow: var(--v-e1); display: grid; gap: var(--v-3); }
-  .lead label { display: grid; gap: .35em; font-size: var(--v-t-xs); font-weight: 700; color: var(--v-ink-soft); }
-  .lead input { font: inherit; font-size: var(--v-t-base); font-weight: 500; color: var(--v-ink); background: var(--v-canvas); border: 0; border-radius: 12px; padding: .85em 1em;
-    box-shadow: inset 0 0 0 1.5px transparent; transition: box-shadow .16s var(--v-ease-out); width: 100%; }
-  .lead input::placeholder { color: #8f8578; }
-  .lead input:focus { outline: none; box-shadow: inset 0 0 0 2px var(--v-ink); }
-  .lead .v-btn { justify-self: start; margin-top: var(--v-2); }
-  .lead__note { font-size: var(--v-t-xs); color: var(--v-ink-soft); }
-  @media (max-width: 860px) { .solo__box { grid-template-columns: 1fr; margin-top: var(--v-6); } .solo__ask { padding: 0; } }
-  .solo__box.is-pop { grid-template-columns: 1fr; }
-  .v-page .solo__pop { margin-top: var(--v-5); }
 
   /* ---- попап-форма Тильды (блок «Форма в попапе», ссылка #popup:zayavka) – в палитре сайта ---- */
   .t-popup[data-tooltip-hook="#popup:zayavka"] { --pp-ink: #23201c; --pp-soft: #6b6257; --pp-bg: #fffdf8; --pp-field: #f3ede2; --pp-accent: #ffcf3f; }
@@ -631,26 +615,12 @@
       </div>
     </section>
 
-    <!-- 4б · БЕЗ ПОСРЕДНИКОВ: короткая заявка, уходит в Telegram -->
+    <!-- 4б · БЕЗ ПОСРЕДНИКОВ -->
     <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f3ede2" id="zayavka" aria-label="Заявка">
       <div class="v-wrap">
         <div class="solo__head" data-v-in data-v-stagger="70">
           <h2 class="v-display h-lg">Не переплачивайте <em class="mark">агентствам</em></h2>
           <p>У меня нет менеджеров: <b>я сама собираю сайт, сама настраиваю рекламу и сама отвечаю</b>. Самозанятая, работаю по договору.</p>
-        </div>
-        <div class="solo__box" data-v-in-self data-v-in>
-          <div class="solo__ask">
-            <h3>Начнём с короткого разговора?</h3>
-            <p>Расскажите о бизнесе – отвечу, что подойдёт и сколько это будет стоить. Это ни к чему не обязывает.</p>
-            <a class="v-btn solo__pop" href="#popup:zayavka" hidden>Оставить заявку</a>
-          </div>
-          <form class="lead" id="lead" novalidate>
-            <label>Ваше имя<input type="text" name="name" autocomplete="given-name" placeholder="Например, Анна"></label>
-            <label>Чем вы занимаетесь<input type="text" name="biz" placeholder="Например, маникюр на дому"></label>
-            <label>Адрес вашего сайта или страницы<input type="text" name="site" inputmode="url" placeholder="Если есть"></label>
-            <button class="v-btn" type="submit">Отправить заявку</button>
-            <span class="lead__note" id="lead-note" role="status">Заявка откроется в Telegram – останется нажать «Отправить».</span>
-          </form>
         </div>
       </div>
     </section>
@@ -950,35 +920,15 @@
     }, true);
     show(0);
 
-    // Заявка: своего сервера нет – собираем текст, копируем и открываем чат в Telegram.
-    var lead = document.getElementById('lead'), leadNote = document.getElementById('lead-note');
-    lead.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var v = function (n) { return lead.elements[n].value.trim(); };
-      if (!v('name') && !v('biz')) { leadNote.textContent = 'Напишите хотя бы имя или чем вы занимаетесь.'; lead.elements.name.focus(); return; }
-      var text = 'Здравствуйте! Хочу обсудить сайт и рекламу.' +
-        (v('name') ? '\nИмя: ' + v('name') : '') + (v('biz') ? '\nЧем занимаюсь: ' + v('biz') : '') + (v('site') ? '\nСайт: ' + v('site') : '');
-      leadNote.textContent = copyNow(text) ? 'Заявка скопирована – вставьте её в открывшийся чат.' : 'Не удалось скопировать – напишите эти строки в чате.';
-      window.open('https://t.me/loyolya', '_blank', 'noopener');
-    });
-
     // Попап-форма Тильды (#popup:zayavka) есть только на loyolabelova.ru: там она и шлёт заявку на почту.
-    // Без неё (GitHub Pages) кнопки ведут к форме в блоке «Заявка».
-    var hasPop = function () { return !!document.querySelector('[data-tooltip-hook="#popup:zayavka"]'); };
+    // Без неё (GitHub Pages) кнопки заявки открывают чат в Telegram.
     document.addEventListener('click', function (e) {
       var a = e.target.closest && e.target.closest('a[href="#popup:zayavka"]');
-      if (!a || hasPop()) return;
+      if (!a || popForm()) return;
       e.preventDefault();
-      location.hash = '#zayavka';
+      if (typeof window.ym === 'function') ym(113921347, 'reachGoal', 'perehod_tg');
+      window.open('https://t.me/loyolya', '_blank', 'noopener');
     });
-    var usePop = function () {
-      if (!hasPop()) return;
-      lead.hidden = true;
-      document.querySelector('.solo__box').classList.add('is-pop');
-      document.querySelector('.solo__pop').hidden = false;
-    };
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', usePop); else usePop();
-    window.addEventListener('load', usePop);
 
     // Цели Метрики: клики по ссылкам на Telegram и ВК (идентификаторы целей – perehod_tg, perehod_vk)
     document.addEventListener('click', function (e) {
