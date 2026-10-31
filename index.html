@@ -61,19 +61,34 @@
     border-bottom: 1px solid var(--v-hair); }
   .bar__mark { font-weight: 700; font-size: var(--v-t-base); text-decoration: none; display: inline-flex; align-items: center; gap: .55em; white-space: nowrap; }
   .bar__mark i { width: .5em; height: .5em; border-radius: 50%; background: var(--brand-dot); display: inline-block; flex: none; }
-  .index { display: flex; gap: var(--v-6); font-size: var(--v-t-sm); }
-  .index a { text-decoration: none; color: var(--v-ink-soft); padding-block: .3em; transition: color .16s var(--v-ease-out); }
+  .index { display: flex; gap: var(--v-5); font-size: var(--v-t-sm); }
+  .index a { text-decoration: none; color: var(--v-ink-soft); padding-block: .3em; white-space: nowrap; transition: color .16s var(--v-ease-out); }
   @media (hover: hover) and (pointer: fine) { .index a:hover { color: var(--v-ink); } }
-  .bar .v-btn { padding: .75em 1.3em; }
+  .bar .v-btn { font-size: var(--v-t-sm); padding: .6em 1.1em; }
   .bar__btns { display: flex; gap: var(--v-2); align-items: center; }
-  .bar .v-btn--ghost { padding-inline: 1.05em; box-shadow: inset 0 0 0 1.5px var(--v-hair-strong); }
-  .bar .bar__cta { font-size: 1.1em; font-weight: 700; padding: .9em 1.9em; margin-left: var(--v-2); }
-  #zayavka { scroll-margin-top: 64px; }
+  .bar .v-btn--ghost { padding-inline: .95em; box-shadow: inset 0 0 0 1.5px var(--v-hair-strong); }
+  .bar .bar__cta { font-weight: 700; }
+  html { scroll-padding-top: 64px; }
   .t-short { display: none; }
+  /* Узко для меню в одну строку: меню уходит второй строкой под шапку и листается пальцем */
+  @media (max-width: 1180px) {
+    .bar { flex-wrap: wrap; row-gap: 0; padding-bottom: 0; }
+    .index { order: 3; flex: 0 0 calc(100% + 2 * var(--v-gutter)); margin-inline: calc(-1 * var(--v-gutter)); padding: .35em var(--v-gutter) .45em;
+      overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .index::-webkit-scrollbar { display: none; }
+    html { scroll-padding-top: 100px; }
+  }
   @media (max-width: 520px) { .bar .t-long { display: none; } .bar .t-short { display: inline; } }
-  .index a { white-space: nowrap; }
-  @media (max-width: 1400px) { .index { display: none; } }
-  @media (max-width: 420px) { .bar .v-btn { padding: .65em 1em; } .bar .v-btn--ghost { padding-inline: .8em; } .bar .bar__cta { font-size: 1.02em; padding: .8em 1.05em; margin-left: 0; } .bar, .bar__btns { gap: 6px; } }
+  @media (max-width: 520px) {
+    .bar { padding-top: 8px; }
+    .bar__mark { font-size: var(--v-t-sm); }
+    .bar .v-btn { font-size: .8rem; padding: .5em .85em; }
+    .bar .v-btn--ghost { padding-inline: .7em; }
+    .bar, .bar__btns { gap: 6px; }
+    .index { font-size: var(--v-t-xs); gap: var(--v-4); padding-block: .2em .35em;
+      -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); }
+    html { scroll-padding-top: 84px; }
+  }
 
   /* ---- 0 · первый экран: текст слева, арка с фото на жёлтом круге справа ------ */
   .hero [data-v-stage] { --h: min(82svh, 780px); }
@@ -576,13 +591,13 @@
         <div>
           <h3 class="rows__lbl" data-v-in>Под ключ</h3>
           <ul class="rows" data-v-in data-v-stagger="50">
-            <li class="is-pair"><h3>Старт: сайт + реклама</h3><span class="price">18 000 ₽</span><p>Сайт-визитка и Яндекс Директ на него, две недели ведения после запуска. Метрика – в подарок. По отдельности – 21 000 ₽.</p></li>
+            <li class="is-pair"><h3>Старт: сайт + реклама</h3><span class="price">18 000 ₽</span><p>Сайт-визитка и Яндекс Директ на него, две недели ведения после запуска. Метрика – в подарок. По отдельности – 22 000 ₽.</p></li>
             <li class="is-pair"><h3>Ультра. Всё включено</h3><span class="price">27 000 ₽</span><p>Сайт, Яндекс Директ, Метрика с целями, карточка в Яндекс Бизнесе и оформление сообщества ВК. Две недели ведения после запуска и отчёт простыми словами. В подарок – месяц мелких правок сайта.</p></li>
           </ul>
           <h3 class="rows__lbl" data-v-in>Что-то одно</h3>
           <ul class="rows" data-v-in data-v-stagger="50">
             <li><h3>Сайт-визитка</h3><span class="time">от 3 дней</span><span class="price">10 000 ₽</span><p>Одностраничный сайт с кнопкой в мессенджер. Два круга правок. Оставлю по ссылке или перенесу в вашу Тильду.</p></li>
-            <li><h3>Настройка Яндекс Директа</h3><span class="price">9 000 ₽</span><p>Разбор ниши и конкурентов, фразы под ваш город, объявления и кампания – на мой сайт или на ваш. Две недели ведения после запуска кампании.</p></li>
+            <li><h3>Настройка Яндекс Директа</h3><span class="price">10 000 ₽</span><p>Разбор ниши и конкурентов, фразы под ваш город, объявления и кампания – на мой сайт или на ваш. Две недели ведения после запуска кампании.</p></li>
             <li><h3>Яндекс Метрика</h3><span class="price">2 000 ₽</span><p>Подключу и настрою цели: заявки, клики на мессенджеры, звонки.</p></li>
             <li><h3>Карточка в Яндекс Бизнесе</h3><span class="price">3 000 ₽</span><p>Описание, услуги и цены, фото, контакты – чтобы вас находили на Картах.</p></li>
             <li><h3>Оформление сообщества ВК</h3><span class="price">6 000 ₽</span><p>Аватар, обложка, меню, описание, закреплённый пост и тексты.</p></li>
@@ -730,12 +745,13 @@
 
             <div class="quiz__done" aria-live="polite">
               <h3>Готово, бонус ваш</h3>
-              <p>Отправьте ответы мне в Telegram – они скопируются, останется вставить их в чат. Отвечу и расскажу, как начнём.</p>
+              <p id="quiz-txt">Отправьте ответы мне в Telegram – они скопируются, останется вставить их в чат. Отвечу и расскажу, как начнём.</p>
               <ul class="quiz__sum" id="quiz-sum"></ul>
             </div>
 
             <div class="quiz__nav">
               <button class="v-btn" type="button" id="quiz-next" disabled>Далее</button>
+              <a class="v-btn" href="#popup:zayavka" id="quiz-mail" hidden>Получить аудит</a>
               <a class="v-btn" href="https://t.me/loyolya" target="_blank" rel="noopener" id="quiz-send" hidden>Отправить ответы в Telegram</a>
               <button class="quiz__back" type="button" id="quiz-back" hidden>Назад</button>
               <span class="quiz__note" id="quiz-note" role="status"></span>
@@ -795,7 +811,7 @@
           </details>
           <details>
             <summary>Как получить бесплатный аудит?</summary>
-            <p>Ответьте на 4 вопроса в блоке выше и отправьте ответы мне в Telegram. Посмотрю ваш рекламный кабинет, а если рекламы ещё нет – нишу, конкурентов и сайт.</p>
+            <p>Ответьте на 4 вопроса в блоке выше и отправьте ответы мне – с заявкой или в Telegram. Посмотрю ваш рекламный кабинет, а если рекламы ещё нет – нишу, конкурентов и сайт.</p>
           </details>
           <details>
             <summary>Как работает «Приведи коллегу»?</summary>
@@ -872,7 +888,10 @@
     var next = document.getElementById('quiz-next'), back = document.getElementById('quiz-back');
     var send = document.getElementById('quiz-send'), note = document.getElementById('quiz-note');
     var nLabel = document.getElementById('quiz-n'), sum = document.getElementById('quiz-sum');
+    var mail = document.getElementById('quiz-mail'), txt = document.getElementById('quiz-txt');
     var cur = 0;
+    // форма попапа Тильды – есть только на loyolabelova.ru, она и шлёт ответы на почту
+    function popForm() { return document.querySelector('[data-tooltip-hook="#popup:zayavka"] form'); }
     form.classList.add('js-quiz');
     function answer(i) { var c = qs[i].querySelector('input:checked'); return c ? c.value : ''; }
     function show(i) {
@@ -882,7 +901,12 @@
       done.classList.toggle('is-on', fin);
       Array.prototype.forEach.call(bars, function (b, k) { b.classList.toggle('is-done', k <= i); });
       nLabel.textContent = fin ? 'Все ответы' : 'Вопрос ' + (i + 1) + ' из ' + qs.length;
-      next.hidden = fin; send.hidden = !fin; back.hidden = i === 0;
+      var pop = fin && popForm();
+      next.hidden = fin; send.hidden = !fin; mail.hidden = !pop; back.hidden = i === 0;
+      send.classList.toggle('v-btn--ghost', !!pop);
+      if (fin) txt.textContent = pop
+        ? 'Оставьте контакт – ответы придут мне вместе с заявкой. Отвечу и расскажу, как начнём. Удобнее в Telegram – там ответы скопируются, останется вставить их в чат.'
+        : 'Отправьте ответы мне в Telegram – они скопируются, останется вставить их в чат. Отвечу и расскажу, как начнём.';
       next.disabled = !fin && !answer(i);
       note.textContent = '';
       if (fin) {
@@ -912,6 +936,18 @@
         qs.map(function (q, k) { return q.querySelector('legend').textContent + ' – ' + answer(k); }).join('\n');
       note.textContent = copyNow(text) ? 'Ответы скопированы – вставьте их в чат.' : 'Не удалось скопировать – просто перечислите ответы в чате.';
     });
+    // Ответы квиза – скрытым полем «quiz» в форму попапа, письмо с заявкой придёт уже с ними.
+    // Попап открывают и другие кнопки – тогда поле очищаем, чтобы старые ответы не ушли с обычной заявкой.
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href="#popup:zayavka"]');
+      var f = a && popForm();
+      if (!f) return;
+      var hid = f.querySelector('input[name="quiz"]');
+      if (!hid) { hid = document.createElement('input'); hid.type = 'hidden'; hid.name = 'quiz'; f.appendChild(hid); }
+      hid.value = a === mail ? qs.map(function (q, k) { return q.querySelector('legend').textContent + ' – ' + answer(k); }).join('; ') : '';
+      var biz = f.querySelector('input[name="biz"]');
+      if (a === mail && biz && !biz.value && answer(1) !== 'Другое') biz.value = answer(1);
+    }, true);
     show(0);
 
     // Заявка: своего сервера нет – собираем текст, копируем и открываем чат в Telegram.
@@ -943,6 +979,15 @@
     };
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', usePop); else usePop();
     window.addEventListener('load', usePop);
+
+    // Цели Метрики: клики по ссылкам на Telegram и ВК (идентификаторы целей – perehod_tg, perehod_vk)
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a || typeof window.ym !== 'function') return;
+      var h = a.href;
+      if (/\/\/t\.me\//.test(h)) ym(113921347, 'reachGoal', 'perehod_tg');
+      else if (/\/\/(m\.)?vk\.(ru|com)\//.test(h)) ym(113921347, 'reachGoal', 'perehod_vk');
+    }, true);
   })();
 </script>
 </body>
